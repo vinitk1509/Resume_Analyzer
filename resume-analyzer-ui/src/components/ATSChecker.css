@@ -1,0 +1,282 @@
+/* ATS Checker Styles */
+.ats-checker-container {
+  background: var(--card-dark);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.ats-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ats-header h2 {
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ats-header p {
+  font-size: 1.05rem;
+  color: var(--muted-dark);
+  margin: 0;
+}
+
+.ats-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .ats-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ATS Section Base Styles */
+.ats-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.ats-section h3 {
+  font-size: 1.3rem;
+  margin: 0 0 20px 0;
+  color: var(--text-dark);
+}
+
+/* Resume Upload Section */
+.resume-upload {
+  justify-content: space-between;
+}
+
+.dropzone {
+  border: 2px dashed rgba(99, 102, 241, 0.4);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(99, 102, 241, 0.02);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropzone:hover {
+  border-color: rgba(99, 102, 241, 0.7);
+  background: rgba(99, 102, 241, 0.08);
+  transform: translateY(-2px);
+}
+
+.dropzone.dragover {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.15);
+  transform: scale(1.02);
+}
+
+.dropzone-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.dropzone-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: var(--text-dark);
+}
+
+.dropzone-hint {
+  font-size: 0.9rem;
+  color: var(--muted-dark);
+  margin: 0;
+}
+
+.file-selected {
+  padding: 12px 16px;
+  background: rgba(16, 185, 129, 0.15);
+  border-left: 4px solid #10b981;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: #6ee7b7;
+  font-size: 0.95rem;
+  animation: slideInUp 0.3s ease-out;
+}
+
+.file-selected strong {
+  color: #10b981;
+}
+
+/* Job Description Section */
+.job-description {
+  justify-content: space-between;
+}
+
+.jd-textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.05);
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+}
+
+.jd-textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.jd-textarea::placeholder {
+  color: var(--muted-dark);
+}
+
+.char-count {
+  font-size: 0.85rem;
+  color: var(--muted-dark);
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* Error Message */
+.error-message {
+  padding: 14px 18px;
+  background: rgba(239, 68, 68, 0.15);
+  border-left: 4px solid #ef4444;
+  border-radius: 8px;
+  color: #fca5a5;
+  margin-bottom: 20px;
+  animation: slideInDown 0.3s ease-out;
+}
+
+/* Action Buttons */
+.ats-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .ats-actions {
+    flex-direction: column;
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+  border: 2px solid #6366f1;
+}
+
+.btn-secondary:hover {
+  background: rgba(99, 102, 241, 0.3);
+  transform: translateY(-3px);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Light mode */
+.light .ats-checker-container {
+  background: var(--card-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.light .ats-section h3 {
+  color: #0f172a;
+}
+
+.light .dropzone-text {
+  color: #0f172a;
+}
+
+.light .dropzone {
+  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.light .dropzone:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.light .jd-textarea {
+  background: rgba(99, 102, 241, 0.03);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.light .jd-textarea:focus {
+  background: rgba(99, 102, 241, 0.08);
+}
